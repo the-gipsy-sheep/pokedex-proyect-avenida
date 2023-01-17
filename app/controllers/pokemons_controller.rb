@@ -8,5 +8,6 @@ class PokemonsController < ApplicationController
   end
 
   def show
+    @pokemon = PokeApi.get(pokemon: params[:id].to_s)
   end
 end
