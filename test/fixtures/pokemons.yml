@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type: 
+  weight: 1.5
+  ability: MyString
+  description: MyString
+  evolution: MyString
+  pokedex_number: 1
+
+two:
+  type: 
+  weight: 1.5
+  ability: MyString
+  description: MyString
+  evolution: MyString
+  pokedex_number: 1
