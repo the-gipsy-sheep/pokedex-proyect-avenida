@@ -1,0 +1,15 @@
+<div class="card mb-3 g-col-3" style="max-width: 500px;">
+  <div class="row g-0">
+    <div class="col-md-4 text-center align-center m-auto">
+      <img src="<%= pokemon.sprites.front_default %>" alt="<%= pokemon.name %> image" class="img-fluid">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title"><%= pokemon.id %> - <%= pokemon.name.capitalize %></h5>
+        <p class="card-text"><%= 'Type'.pluralize(pokemon.types.count) %>: <%= pokemon.types[0].type.name.capitalize %> <%= "/ #{pokemon.types[1].type.name.capitalize}" if pokemon.types[1] %></p>
+        <p class="card-text"><%= 'Ability'.pluralize(pokemon.abilities.count) %>: <%= pokemon.abilities[0].ability.name.capitalize %> <%= " / #{pokemon.abilities[1].ability.name.capitalize}" if pokemon.abilities[1] %> <%= " / #{pokemon.abilities[2].ability.name.capitalize}" if pokemon.abilities[2] %></p>
+        <p class="card-text"><small class="text-muted">Weight: <%= pokemon.weight / 10.0 %> Kg</small></p>
+      </div>
+    </div>
+  </div>
+</div>

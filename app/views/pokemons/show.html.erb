@@ -4,6 +4,6 @@
 <%= @pokemon.weight %>
 <%= @pokemon.height %>
 <%= @pokemon.types[0].type.name.capitalize %>
-<%= @pokemon.types[1].type.name.capitalize if (@pokemon.types[1] != nil) %>
+<%= @pokemon.types[1].type.name.capitalize if @pokemon.types[1] %>
 <img src="<%= @pokemon.sprites.front_default %>" alt="<%= @pokemon.name %> image">
 <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/<%= @pokemon.id %>.png" alt="">

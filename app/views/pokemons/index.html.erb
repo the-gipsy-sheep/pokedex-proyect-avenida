@@ -1,9 +1,13 @@
 
 <h1>Pokedex</h1>
-<ul>
-  <% @pokemons.each do |pokemon| %>
-    <li>
-      <%= pokemon.name %>
-    </li>
-  <% end %>
-</ul>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <% @pokemons.each do |pokemon| %>
+        <div class="container">
+              <%= render "shared/index_card", pokemon: pokemon %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
