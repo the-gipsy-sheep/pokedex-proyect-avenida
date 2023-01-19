@@ -1,9 +1,12 @@
 .index-card {
-  background: rgb(255,0,0);
-  background: linear-gradient(45deg, rgba(255,0,0,1) 0%, rgba(255,255,255,0.1) 61%, rgba(255,0,0,0.05) 100%);
+  // background: rgb(255,0,0);
+  // background: linear-gradient(45deg, rgba(255,0,0,0.05) 0%, rgba(255,255,255,0.1) 39%, rgba(255,0,0,1) 100%);
+  background-position: center;
+  background-size: cover;
   border-radius: 10px;
   border: 1px;
   box-shadow: 5px 5px 5px rgba($color: #000000, $alpha: 0.20);
+  color: white;
 }
 
 .index-card:hover {
