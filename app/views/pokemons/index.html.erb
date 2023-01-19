@@ -2,10 +2,10 @@
 <h1>Pokedex</h1>
 <div class="container">
   <div class="row">
-    <div class="col">
-      <% @pokemons.each do |pokemon| %>
+    <% @pokemons.each do |pokemon| %>
+      <div class="col-4">
         <%= render "shared/index_card", pokemon: pokemon %>
-      <% end %>
-    </div>
+      </div>
+    <% end %>
   </div>
 </div>
