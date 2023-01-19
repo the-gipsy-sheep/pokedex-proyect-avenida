@@ -8,6 +8,14 @@ class PokemonsController < ApplicationController
   end
 
   def show
-    @pokemon = PokeApi.get(pokemon: params[:id].to_s)
+    if params[:query]
+      @pokemon = PokeApi.get(pokemon: params[:query])
+    else
+      if @pokemon
+        @pokemon = PokeApi.get(pokemon: params[:id].to_s)
+      else
+        render :show, status: :unprocessable_entity
+      end
+    end
   end
 end

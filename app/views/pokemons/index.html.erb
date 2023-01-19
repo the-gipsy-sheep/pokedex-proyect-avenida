@@ -6,11 +6,11 @@
         <input type="submit" value="Search">
       </p>
     </form> %>
-    <%= form_with url: pokemon_path(:query), method: :get do |form| %>
-  <%= form.label :query, "Search for:" %>
-  <%= form.text_field :query %>
-  <%= form.submit "Search" %>
-<% end %>
+    <%= form_with url: pokemon_path(:params_query), method: :get do |form| %>
+      <%= form.label :query, "Search for:" %>
+      <%= form.text_field :query %>
+      <%= form.submit "Search" %>
+    <% end %>
   </div>
   <div class="row">
     <% @pokemons.each do |pokemon| %>
