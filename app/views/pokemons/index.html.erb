@@ -4,9 +4,7 @@
   <div class="row">
     <div class="col">
       <% @pokemons.each do |pokemon| %>
-        <div class="container">
-              <%= render "shared/index_card", pokemon: pokemon %>
-        </div>
+        <%= render "shared/index_card", pokemon: pokemon %>
       <% end %>
     </div>
   </div>
