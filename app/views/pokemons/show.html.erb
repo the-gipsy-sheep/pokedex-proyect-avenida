@@ -1,8 +1,25 @@
 <% if @pokemon %>
 
-  <h1>Info del pokemon</h1>
+  <h1 class="text-center mb-5"><%= @pokemon.id %> - <%= @pokemon.name.capitalize %></h1>
+  <div class="container">
+    <div class="card mb-3 mx-auto" style="max-width: 90%;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/<%= @pokemon.id %>.png" class="img-fluid rounded-start" alt="<%= @pokemon.name %> image">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  <%= @pokemon.name.capitalize %>
   <%= @pokemon.weight %>
   <%= @pokemon.height %>
   <%= @pokemon.types[0].type.name.capitalize %>

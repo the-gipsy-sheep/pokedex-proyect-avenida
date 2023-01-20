@@ -12,11 +12,7 @@ class PokemonsController < ApplicationController
     if params[:query]
       @pokemon = PokeApi.get(pokemon: params[:query])
     else
-      if @pokemon
-        @pokemon = PokeApi.get(pokemon: params[:id].to_s)
-      else
-        render :show, status: :unprocessable_entity
-      end
+      @pokemon = PokeApi.get(pokemon: params[:id].to_s)
     end
   end
 end

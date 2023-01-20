@@ -1,9 +1,9 @@
 <div class="container">
-  <div class="container">
+  <div class="container mb-3 text-center">
     <%= form_with url: pokemon_path(:params_query), method: :get do |form| %>
-      <%= form.label :query, "Search for:" %>
-      <%= form.text_field :query %>
-      <%= form.submit "Search" %>
+      <%= form.label :query, "Search Pokemon:" %>
+      <%= form.text_field :query, placeholder: "By name or number..." %>
+      <%= form.submit "Search", class: "btn btn-danger" %>
     <% end %>
   </div>
   <div class="row">
