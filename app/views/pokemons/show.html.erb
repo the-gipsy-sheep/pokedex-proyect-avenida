@@ -9,24 +9,19 @@
         </div>
         <div class="col-md-8">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            <h5 class="card-title">Pokedex Description</h5>
+            <p class="card-text"><%= @pokeinfo.flavor_text_entries[0].flavor_text %></p>
+            <p class="card-text"><%= 'Type'.pluralize(@pokemon.types.count) %>: <%= @pokemon.types[0].type.name.capitalize %> <%= "/ #{@pokemon.types[1].type.name.capitalize}" if @pokemon.types[1] %></p>
+            <p class="card-text"><%= 'Ability'.pluralize(@pokemon.abilities.count) %>: <%= @pokemon.abilities[0].ability.name.capitalize %> <%= " / #{@pokemon.abilities[1].ability.name.capitalize}" if @pokemon.abilities[1] %> <%= " / #{@pokemon.abilities[2].ability.name.capitalize}" if @pokemon.abilities[2] %></p>
+            <%# <p class="card-text">Evolution: <%= @evolution.chain.evolves_to[0].species.name ? @evolution.chain.evolves_to[0].species.name.capitalize : "This Pokemon doesn't evolve"%</p> %>
+            <p class="card-text"><small>Weight: <%= @pokemon.weight / 10.0 %> Kg</small></p>
+            <p class="card-text"><small>Height: <%= @pokemon.height * 10 %> cm</small></p>
           </div>
         </div>
       </div>
+    <%= link_to "Back to home", root_path, class: "btn btn-primary mx-auto" %>
     </div>
   </div>
-
-  <%= @pokemon.weight %>
-  <%= @pokemon.height %>
-  <%= @pokemon.types[0].type.name.capitalize %>
-  <%= @pokemon.types[1].type.name.capitalize if @pokemon.types[1] %>
-  <img src="<%= @pokemon.sprites.front_default %>" alt="<%= @pokemon.name %> image">
-  <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/<%= @pokemon.id %>.png" alt="">
-
 <% else %>
   <%= render "shared/error" %>
 <% end %>

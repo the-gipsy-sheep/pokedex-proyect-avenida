@@ -11,8 +11,12 @@ class PokemonsController < ApplicationController
   def show
     if params[:query]
       @pokemon = PokeApi.get(pokemon: params[:query])
+      @pokeinfo = PokeApi.get(pokemon_species: params[:query])
+      # @evolution = PokeApi.get(evolution_chain: params[:query])
     else
       @pokemon = PokeApi.get(pokemon: params[:id].to_s)
+      @pokeinfo = PokeApi.get(pokemon_species: params[:id])
+      # @evolution = PokeApi.get(evolution_chain: params[:id])
     end
   end
 end
