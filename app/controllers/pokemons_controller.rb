@@ -1,8 +1,9 @@
 class PokemonsController < ApplicationController
   def index
     @pokemons = []
-    10.times do
-      pokemon = PokeApi.get(pokemon: (1..905).to_a.sample.to_s)
+    @numbers = (1..905).to_a.sample(18)
+    @numbers.each do |number|
+      pokemon = PokeApi.get(pokemon: number)
       @pokemons << pokemon
     end
   end
