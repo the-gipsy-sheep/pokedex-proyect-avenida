@@ -9,7 +9,7 @@
         </div>
         <div class="col-md-8">
           <div class="card-body">
-            <h3 class="card-title text-center"><strong>Pokedex Description</strong></h3>
+            <h3 class="card-title"><strong>Pokedex Description</strong></h3>
             <p class="card-text pt-3"><em><%= @pokeinfo.flavor_text_entries[0].flavor_text %></em></p>
             <p class="card-text pt-3"><strong><%= 'Type'.pluralize(@pokemon.types.count) %>:</strong> <%= @pokemon.types[0].type.name.capitalize %> <%= "/ #{@pokemon.types[1].type.name.capitalize}" if @pokemon.types[1] %></p>
             <p class="card-text pt-3"><strong><%= 'Ability'.pluralize(@pokemon.abilities.count) %>:</strong> <%= @pokemon.abilities[0].ability.name.capitalize %> <%= " / #{@pokemon.abilities[1].ability.name.capitalize}" if @pokemon.abilities[1] %> <%= " / #{@pokemon.abilities[2].ability.name.capitalize}" if @pokemon.abilities[2] %></p>
